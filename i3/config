@@ -150,6 +150,9 @@ assign [class="firefox"] $ws1
 assign [class="kitty"] $ws2
 for_window [class="Spotify"] move to workspace $ws3
 
+# enable mpv as floating window
+for_window [class="mpv"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -192,6 +195,7 @@ for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps horizontal 20
 gaps top 35
+gaps bottom 10
 
 # Start picom
 exec --no-startup-id picom -b
